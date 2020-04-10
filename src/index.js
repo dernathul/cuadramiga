@@ -12,11 +12,6 @@ ReactDOM.render(
     <App />
   </Provider>, document.getElementById('root'));
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+
 
 serviceWorker.unregister();

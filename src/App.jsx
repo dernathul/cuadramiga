@@ -1,15 +1,24 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
+import { connect } from "react-redux";
 
- const App = () => {
-  return (
-    <div>
-      <h1> Cuadramiga </h1>
-      <h2> tu red de comercio justo </h2>
-    </div>
-  )
+class App extends Component {
+  state = {
+    message: "Cuadramiga"
+  }
+
+  render() {
+    return (
+    <>
+      <h1> {this.props.state.message} </h1>
+    </>
+    );
+  }
 }
 
+const mapStateToProps = (state) => {
+  return {
+    state: state
+  } 
+}
 
-export default App
-
-
+export default connect(mapStateToProps)(App);
